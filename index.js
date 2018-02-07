@@ -34,16 +34,17 @@ function tictactoe() {
   let counto = 0;
   let xo = ['X', 'O'];
   for (var i = 0; i < 3; i++) {
-    array.push([]);
+    let arrayTemp = new Array;
     for (var j = 0; j < 3; j++) {
       let rand = Math.floor(Math.random() * 2);
       if (countx < 5 || counto < 5)
-        array[i].push(xo[rand]);
+        arrayTemp.push(xo[rand]);
       else
-        array[i].push(xo[(rand == 0) ? 1 : 0]);
+          arrayTemp.push(xo[(rand == 0) ? 1 : 0]);
       (rand == 0) ? countx++ : counto++;
-
     }
+    array.push(arrayTemp);
+
   }
   return array;
 }
