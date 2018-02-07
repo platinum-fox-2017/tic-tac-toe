@@ -1,11 +1,11 @@
-function createTTT(jumlahRow,jumlahCol) {
+function createTicTacToe(jumlahRow,jumlahCol) {
 
-    var hasilTTT = [];
+    var hasilTicTacToe = [];
     var scoreX = 0; // posisi 0
     var scoreO = 0; // posisi 1
 
     for (var i = 0; i < jumlahRow; i++) {
-        hasilTTT.push([]);
+        hasilTicTacToe.push([]);
         for (var j = 0; j < jumlahCol; j++) {
             var alphabet = 'XO';
 
@@ -20,21 +20,21 @@ function createTTT(jumlahRow,jumlahCol) {
             debugger
 
             if (scoreX > 5) {
-                hasilTTT[i].push('O');
+                hasilTicTacToe[i].push('O');
             } else if (scoreO > 5) {
-                hasilTTT[i].push('X');
+                hasilTicTacToe[i].push('X');
             } else {
-                hasilTTT[i].push(alphabet[angkaRandom]);
+                hasilTicTacToe[i].push(alphabet[angkaRandom]);
             }
             debugger
         }
     }
 
-    return hasilTTT;
+    return hasilTicTacToe;
     
 }
 
-console.log(createTTT(3,3));
+console.log(createTicTacToe(3,3));
 
 /*
 TRYOUT bikin hasil random seimbang
